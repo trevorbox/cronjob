@@ -2,13 +2,8 @@ kind: CronJob
 apiVersion: batch/v1beta1
 metadata:
   name: kiali-maistra-labels
-  namespace: default
-  selfLink: /apis/batch/v1beta1/namespaces/default/cronjobs/example
-  uid: 5b41971b-53b0-4dcd-a664-898cf98cde9f
-  resourceVersion: '688991'
-  creationTimestamp: '2020-07-22T23:54:59Z'
 spec:
-  schedule: '*/1 * * * *'
+  schedule: '0 * * * *' #or @hourly
   concurrencyPolicy: Allow
   suspend: false
   jobTemplate:
